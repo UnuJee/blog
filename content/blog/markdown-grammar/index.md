@@ -1,8 +1,7 @@
 ---
 title: 마크다운(Markdown) 문법 총정리
 date: "2020-07-11"
-description: "개츠비로 블로그를 시작하게 되면서 마크다운을 이용하여 글을 작성하게 되었다. 
-<br />
+description: "개츠비로 블로그를 시작하게 되면서 마크다운을 이용하여 글을 작성하게 되었다.
 마크다운을 마스터해보자."
 ---
 
@@ -43,8 +42,6 @@ h2
 ---
 ```
 
-<br />
-
 ## 인용 Blockquotes
 
 > 인용문
@@ -52,8 +49,6 @@ h2
 ```
 > 인용문
 ```
-
-<br />
 
 ## 코드 블럭 Code Blocks
 
@@ -67,8 +62,6 @@ h2
 ``` 혹은 ~~~
 ````
 
-<br />
-
 ## 인라인 코드 Inline Code Blocks
 
 `인라인 코드 블럭`
@@ -76,8 +69,6 @@ h2
 ```
 `인라인 코드 블럭`
 ```
-
-<br />
 
 ## 강조 Emphasis
 
@@ -97,8 +88,6 @@ _italic_
 __bold__
 ```
 
-<br />
-
 ## 수평선 Horizontal Rules
 
 ---
@@ -109,15 +98,13 @@ __bold__
 ___
 ```
 
-<br />
-
 ## 링크 Links
 
 - 외부 링크 External Links
 
   - 인라인 링크
 
-  [Google](https://www.google.com "구글")
+  [Google](https://www.google.com '구글')
 
   ```
   [Google](https://www.google.com "구글")
@@ -155,8 +142,6 @@ ___
 [1]: https://www.google.com/
 [2]: https://www.naver.com/
 
-<br />
-
 ## 리스트 Lists
 
 - 순서 있는 리스트 Ordered Lists
@@ -190,8 +175,6 @@ ___
     - item 1-2
 ```
 
-<br />
-
 ## 테이블 Tables
 
 | Header 1  | Header 2  |
@@ -206,8 +189,6 @@ ___
 | Content 2 | Content 4 |
 ```
 
-<br />
-
 ## 이미지 Adding Images
 
 ![alt text](./gatsby-icon.png)
@@ -216,5 +197,3 @@ ___
 ![alt text](./gatsby-icon.png) // 인라인 이미지
 ![alt text](image_URL) // 링크 이미지
 ```
-
-<br />

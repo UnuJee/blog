@@ -1,0 +1,45 @@
+---
+title: 숫자로 이루어진 배열에서 최대/최소값 찾기
+date: '2020-07-12'
+description: '숫자로 이루어진 배열에서 최대 혹은 최소값을 찾을 때 for문을 돌리는 것 외에 어떤 방법이 있을까?'
+---
+
+숫자로 이루어진 배열에서 최대 혹은 최소값을 찾을 때 for문을 돌리는 것 외에 어떤 방법이 있을까?
+
+<!-- end -->
+
+---
+
+## Math 객체 사용
+
+Math의 메서드 max()와 min()은 입력된 숫자 중 가장 크고 작은 숫자를 반환한다.
+
+Function의 메서드 apply()는 주어진 this값과 배열 (또는 유사 배열 객체) 로 제공되는 인자로 함수를 호출한다.
+
+```javascript
+const array = [11, 33, 55, 22, 44, 99];
+Math.max.apply(null, array); //  expected output: 99
+Math.min.apply(null, array); //  expected output: 11
+```
+
+## reduce() 메서드 사용
+
+reduce() 메서드의 reducer 함수는 accumulator에 반환 값을 할당하고, accumulator는 순회 중 유지된다.
+
+```javascript
+const array = [11, 33, 55, 22, 44, 99];
+const max = array.reduce((a, c) => (a < c ? c : a));
+const min = array.reduce((a, c) => (a > c ? c : a));
+```
+
+## sort() 메서드 사용
+
+sort() 메서드의 compareFunction 함수는 정렬 순서를 정의하는 함수다. 작동하는 방식은 아래 링크를 참조하기 바란다.
+
+[sort compareFunction에 대한 설명](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#%EC%84%A4%EB%AA%85 'sort mdn')
+
+```javascript
+const array = [11, 33, 55, 22, 44, 99];
+const max = array.slice(0).sort((a, b) => b - a)[0];
+const min = array.slice(0).sort((a, b) => a - b)[0];
+```
