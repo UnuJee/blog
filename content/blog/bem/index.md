@@ -1,0 +1,129 @@
+---
+title: Introduction of BEM
+date: '2020-07-13'
+description: 'CSS 방법론인 BEM에 대해서 알아보자.'
+---
+
+## Introduction
+
+작은 사이트에서 스타일에 대해 코드를 짤 때 어떻게 구성할지에 대해 신경쓰지 않는 것은 큰 문제가 되지 않는다. 하지만 그것이 점점 커지고 복잡해지게 되면, 코드를 어떤 구조로 구성하는지는 다음과 같은 세가지 이유로 아주 중요해진다.
+
+1. 코드 작성 시간에 영향을 끼친다.
+2. 써야하는 코드의 양에 영향을 끼친다.
+3. 브라우저가 로딩해야하는 양에 영향을 끼친다.
+
+그리고 팀과 협업해야 할 때, 그리고 좋은 퍼포먼스가 필수적일 때 특히 중요하다.
+
+그리고 역시 레거시 코드와 함께 긴 기간 진행되는 프로젝트들에도 그렇다.
+
+## Methodologies
+
+CSS의 양을 줄이고, 개발자 사이에 협업을 할 수 있게 해주고, 많은 양의 CSS 코드들을 유지시키는 것을 목적으로 하는 다양한 방법론들이 있다.
+
+> ### OOCSS
+> 
+> Separating container and content with CSS “objects”
+
+> ### SMACSS
+> 
+> Style-guide to write your CSS with five categories for CSS rules
+
+> ### SUITCSS
+> 
+> Structured class names and meaningful hyphens
+
+> ### Atomic
+> 
+> Breaking down styles into atomic, or indivisible, pieces
+
+## 왜 BEM을 써야할까?
+
+CSS와 UI를 구조화하는데 이점이 있기 때문이다. 어떤 스타일들은 엄격하지 않고 유연해서 이해하기 쉽고 팀에 맞추기가 쉽다.
+
+> 내가 다른 방법론들을 쓰지 않고 BEM을 고른 이유는 다음과 같다. BEM은 다른 방법론에 비해 혼란을 덜 야기한다. (i.e. SMACSS) 하지만 여전히 알아차리기 쉬운 용어를 사용하여 우리가 원하는 좋은 아키텍처를 제공한다. (i.e. OOCSS)
+> 
+> Mark McDonnell, [Maintainable CSS with BEM](https://www.integralist.co.uk/posts/bem/)
+
+## Blocks, Elements and Modifiers
+
+> ### Block
+> 
+> Standalone entity that is meaningful on its own.
+> 
+> Examples: header, container, menu, checkbox, input
+
+> ### Element
+> 
+> A part of a block that has no standalone meaning and is semantically tied to its block.
+> 
+> Examples: menu item, list item, checkbox, caption, header title
+
+> ### Modifier
+> 
+> A flag on a block or element. Use them to change appearance or behavior.
+> 
+> Examples: disabled, highlighted, checked, fixed, size big, color yellow
+
+## Under the hood
+
+페이지의 특정한 어느 한 부분에 BEM을 적용시켜보자.
+
+![github_buttons](./github_buttons.jpg)
+
+Normal button이 있고 두가지 상태에 대한 버튼들이다. 이 경우에는 `block--modifier-value` syntax를 따른다.
+
+> HTML
+
+    ```html
+    <button class="button">
+        Normal button
+    </button>
+    <button class="button button--state-success">
+        Success button
+    </button>
+    <button class="button button--state-danger">
+        Danger button
+    </button>
+    ```
+> CSS
+  
+    ```css
+    .button {
+        display: inline-block;
+        border-radius: 3px;
+        padding: 7px 12px;
+        border: 1px solid #D5D5D5;
+        background-image: linear-gradient(#EEE, #DDD);
+        font: 700 13px/18px Helvetica, arial;
+    }
+    .button--state-success {
+        color: #FFF;
+        background: #569E3D linear-gradient(#79D858, #569E3D) repeat-x;
+        border-color: #4A993E;
+    }
+    .button--state-danger {
+        color: #900;
+    }
+    ```
+
+## Benefits
+
+> ### Modularity
+> 
+> 페이지에서 Block 스타일들은 절대 다른 Element들에 의존적이지 않다. 그래서 cascading에 대한 문제들을 겪지 않을 수 있다.
+> 
+> 작업이 끝난 Block들은 다른 새로운 프로젝트에 옮길 수 있게 된다.
+
+> ### Reusability
+> 
+> 블럭들을 독립적으로 구성시키고, 그것들을 재사용하는 것은 CSS 코드의 양을 줄일 수 있게 되고 유지가 쉬워진다.
+> 
+> 스타일 가이드라인을 지킨 곳에서는 블럭 라이브러리를 가질 수 있게 된다.
+
+> ### Structure
+> 
+> BEM 방법론은 CSS 코드가 간단하고 쉽게 이해되도록 하는 단단한 구조를 가지게 해준다.
+
+## Reference
+
+> [Get BEM](http://getbem.com/introduction/)

@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Unu.Blog`,
     author: {
-      name: `Yunwoo Ji`,
-      summary: `who lives and works in Seoul building useful things.`,
+      name: `Unu`,
+      summary: `I've found work to do all my life. That is Front-End.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
