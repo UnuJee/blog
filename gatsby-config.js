@@ -46,8 +46,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-highlight-code`,
             options: {
-              terminal: "carbon",
-              theme: "a11y-dark",
+              terminal: 'carbon',
+              theme: 'a11y-dark',
             },
           },
           `gatsby-remark-autolink-headers`,
@@ -89,4 +89,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
