@@ -1,0 +1,48 @@
+---
+title: Introduction of Markup Language
+date: '2020-07-14'
+description: '개발자라면 마크업이라는 말을 많이 들어봤을 것이다. 마크업에 대해 알아보자.'
+---
+
+## Markup Language
+
+마크업 언어는 요소를 정의하기 위해 태그를 사용하는 컴퓨터 언어이다.
+마크업 언어는 일반적인 단어를 포함해서 전형적인 programming syntax보다
+인간이 읽기 쉽다. 여러 마크업 언어들이 존재하지만 HTML과 XML이 가장 유명하다.
+
+### HTML
+
+HTML은 웹페이지를 만들기위해 사용되는 마크업 언어이다. 각 페이지의 항목은
+HTML 태그에 의해 정의된다. `<head>`,`<body>`,`<div>` 과 같은 기본적인 태그들은 페이지의 영역을
+정의하고, `<table>`,`<form>`,`<image>`,`<a>` 는 페이지 안에서 요소들을 정의한다. 대부분의
+요소들은 시작과 끝에 태그들이 필요하다. (태그들 사이에 있는 항목도 마찬가지)
+
+```html
+<a href="https://google.com">Google</a>
+```
+
+### XML
+
+XML은 페이지에 정보를 형성하기보다 구조화된 데이터들을 저장하는데 사용된다. HTML은 이미 정의된 태그들을
+쓰는 반면에, XML은 요소들을 정의하기 위해 커스텀 태그를 사용한다. 예를들어 컴퓨터 모델의 정보를 담기위해
+XML은 다음과 같이 작성될 것이다.
+
+```
+<computer>
+  <manufacturer>Dell</manufacturer>
+  <model>XPS 17</model>
+  <components>
+    <processor>2.00 GHz Intel Core i7</processor>
+    <ram>6GB</ram>
+    <storage>1TB</storage>
+  </components>
+</computer>
+```
+
+XML은 확장가능한 마크업 언어로 불린다. 커스텀 태그들이 다양한 범위의 요소들을 지원가능하기 때문이다.
+각각의 XML 파일은 표준 텍스트 형식으로 저장되서 소프트웨어 프로그램이 parse하거나 데이터를 읽기 쉽다.
+그러므로, XML은 구조화된 데이터를 export하고 여러 프로그램 사이에서 데이터를 공유하기에 괜찮은 선택지다.
+
+### Reference
+
+<https://techterms.com/definition/markup_language>

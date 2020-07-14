@@ -20,49 +20,49 @@ description: 'CSS 방법론인 BEM에 대해서 알아보자.'
 
 CSS의 양을 줄이고, 개발자 사이에 협업을 할 수 있게 해주고, 많은 양의 CSS 코드들을 유지시키는 것을 목적으로 하는 다양한 방법론들이 있다.
 
-> ### OOCSS
-> 
-> Separating container and content with CSS “objects”
+### OOCSS
 
-> ### SMACSS
-> 
-> Style-guide to write your CSS with five categories for CSS rules
+: Separating container and content with CSS “objects”
 
-> ### SUITCSS
-> 
-> Structured class names and meaningful hyphens
+### SMACSS
 
-> ### Atomic
-> 
-> Breaking down styles into atomic, or indivisible, pieces
+: Style-guide to write your CSS with five categories for CSS rules
+
+### SUITCSS
+
+: Structured class names and meaningful hyphens
+
+### Atomic
+
+: Breaking down styles into atomic, or indivisible, pieces
 
 ## 왜 BEM을 써야할까?
 
 CSS와 UI를 구조화하는데 이점이 있기 때문이다. 어떤 스타일들은 엄격하지 않고 유연해서 이해하기 쉽고 팀에 맞추기가 쉽다.
 
 > 내가 다른 방법론들을 쓰지 않고 BEM을 고른 이유는 다음과 같다. BEM은 다른 방법론에 비해 혼란을 덜 야기한다. (i.e. SMACSS) 하지만 여전히 알아차리기 쉬운 용어를 사용하여 우리가 원하는 좋은 아키텍처를 제공한다. (i.e. OOCSS)
-> 
+>
 > Mark McDonnell, [Maintainable CSS with BEM](https://www.integralist.co.uk/posts/bem/)
 
 ## Blocks, Elements and Modifiers
 
-> ### Block
-> 
-> Standalone entity that is meaningful on its own.
-> 
-> Examples: header, container, menu, checkbox, input
+### Block
 
-> ### Element
-> 
-> A part of a block that has no standalone meaning and is semantically tied to its block.
-> 
-> Examples: menu item, list item, checkbox, caption, header title
+: Standalone entity that is meaningful on its own.
 
-> ### Modifier
-> 
-> A flag on a block or element. Use them to change appearance or behavior.
-> 
-> Examples: disabled, highlighted, checked, fixed, size big, color yellow
+Examples: header, container, menu, checkbox, input
+
+### Element
+
+: A part of a block that has no standalone meaning and is semantically tied to its block.
+
+Examples: menu item, list item, checkbox, caption, header title
+
+### Modifier
+
+: A flag on a block or element. Use them to change appearance or behavior.
+
+Examples: disabled, highlighted, checked, fixed, size big, color yellow
 
 ## Under the hood
 
@@ -72,7 +72,7 @@ CSS와 UI를 구조화하는데 이점이 있기 때문이다. 어떤 스타일�
 
 Normal button이 있고 두가지 상태에 대한 버튼들이다. 이 경우에는 `block--modifier-value` syntax를 따른다.
 
-> HTML
+### HTML
 
     ```html
     <button class="button">
@@ -85,8 +85,9 @@ Normal button이 있고 두가지 상태에 대한 버튼들이다. 이 경우�
         Danger button
     </button>
     ```
-> CSS
-  
+
+### CSS
+
     ```css
     .button {
         display: inline-block;
@@ -108,22 +109,22 @@ Normal button이 있고 두가지 상태에 대한 버튼들이다. 이 경우�
 
 ## Benefits
 
-> ### Modularity
-> 
-> 페이지에서 Block 스타일들은 절대 다른 Element들에 의존적이지 않다. 그래서 cascading에 대한 문제들을 겪지 않을 수 있다.
-> 
-> 작업이 끝난 Block들은 다른 새로운 프로젝트에 옮길 수 있게 된다.
+### Modularity
 
-> ### Reusability
-> 
-> 블럭들을 독립적으로 구성시키고, 그것들을 재사용하는 것은 CSS 코드의 양을 줄일 수 있게 되고 유지가 쉬워진다.
-> 
-> 스타일 가이드라인을 지킨 곳에서는 블럭 라이브러리를 가질 수 있게 된다.
+- 페이지에서 Block 스타일들은 절대 다른 Element들에 의존적이지 않다. 그래서 cascading에 대한 문제들을 겪지 않을 수 있다.
 
-> ### Structure
-> 
-> BEM 방법론은 CSS 코드가 간단하고 쉽게 이해되도록 하는 단단한 구조를 가지게 해준다.
+- 작업이 끝난 Block들은 다른 새로운 프로젝트에 옮길 수 있게 된다.
+
+### Reusability
+
+- 블럭들을 독립적으로 구성시키고, 그것들을 재사용하는 것은 CSS 코드의 양을 줄일 수 있게 되고 유지가 쉬워진다.
+
+- 스타일 가이드라인을 지킨 곳에서는 블럭 라이브러리를 가질 수 있게 된다.
+
+### Structure
+
+- BEM 방법론은 CSS 코드가 간단하고 쉽게 이해되도록 하는 단단한 구조를 가지게 해준다.
 
 ## Reference
 
-> [Get BEM](http://getbem.com/introduction/)
+<http://getbem.com/introduction/>
