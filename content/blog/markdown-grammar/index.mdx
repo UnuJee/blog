@@ -27,8 +27,7 @@ description: "개츠비로 블로그를 시작하게 되면서 마크다운을 �
 
 ###### H6
 
-```
-
+```markdown
 # H1
 
 ## H2
@@ -44,24 +43,23 @@ description: "개츠비로 블로그를 시작하게 되면서 마크다운을 �
 # h1
 
 ## h2
-
 ```
 
 ## 인용 Blockquotes
 
 > 인용문
 
-```
+```markdown
 > 인용문
 ```
 
 ## 코드 블럭 Code Blocks
 
-```
+```markdown
 코드 블럭
 ```
 
-````
+````javascript
 ``` 혹은 ~~~
 코드 블럭
 ``` 혹은 ~~~
@@ -71,7 +69,7 @@ description: "개츠비로 블로그를 시작하게 되면서 마크다운을 �
 
 `인라인 코드 블럭`
 
-```
+```markdown
 `인라인 코드 블럭`
 ```
 
@@ -85,19 +83,19 @@ _italic_
 
 **bold**
 
-```
-*기울여 쓰기*
+```markdown
+_기울여 쓰기_
 _italic_
 
 **굵게 쓰기**
-__bold__
+**bold**
 ```
 
 ## 수평선 Horizontal Rules
 
 ---
 
-```
+```javascript
 ---
 ***
 ___
@@ -111,8 +109,8 @@ ___
 
   [Google](https://www.google.com '구글')
 
-  ```
-  [Google](https://www.google.com "구글")
+  ```markdown
+  [Google](https://www.google.com '구글')
   ```
 
   - 참조 링크
@@ -120,7 +118,7 @@ ___
   [Google][1]
   [Naver][2]
 
-  ```
+  ```markdown
   [Google][1]
   [Naver][2]
 
@@ -132,7 +130,7 @@ ___
 
   <https://www.google.com/>
 
-  ```
+  ```markdown
   <https://www.google.com/>
   ```
 
@@ -140,7 +138,7 @@ ___
 
 [H1](#h1)
 
-```
+```markdown
 [H1](#h1)
 ```
 
@@ -155,7 +153,7 @@ ___
   2. item 2
   3. item 3
 
-  ```
+  ```markdown
   1. item 1
   2. item 2
   3. item 3
@@ -164,20 +162,21 @@ ___
 - 순서 없는 리스트 Unordered Lists
 
   - item 1
-
-        - item 1-1
-        - item 1-2
-
-```
-* item 1
-    * item 1-1
-    * item 1-2
-+ item 1
-    + item 1-1
-    + item 1-2
-- item 1
     - item 1-1
     - item 1-2
+
+```markdown
+- item 1
+  - item 1-1
+  - item 1-2
+
+* item 1
+  - item 1-1
+  - item 1-2
+
+- item 1
+  - item 1-1
+  - item 1-2
 ```
 
 ## 테이블 Tables
@@ -187,7 +186,7 @@ ___
 | Content 1 | Content 3 |
 | Content 2 | Content 4 |
 
-```
+```markdown
 | Header 1  | Header 2  |
 | --------- | --------- |
 | Content 1 | Content 3 |
